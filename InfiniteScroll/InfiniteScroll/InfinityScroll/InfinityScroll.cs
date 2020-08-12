@@ -30,7 +30,6 @@ namespace InfiniteScroll.InfinityScroll
             var localDataCount = localData.Count;
             if (_dataRequested)
             {
-
                 return;
             }
             switch (direction)
