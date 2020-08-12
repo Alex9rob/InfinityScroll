@@ -16,7 +16,7 @@ namespace InfiniteScroll
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UICollectionView _collectionView { get; set; }
+        InfiniteScroll.Collection.InfiniteCollectionView _collectionView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {

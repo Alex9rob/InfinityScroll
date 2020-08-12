@@ -24,7 +24,7 @@ namespace InfiniteScroll.InfinityScroll
             ShowLocalData();
         }
 
-        public async void ScrolledTo(int item, EDirection direction)
+        public async void ScrolledTo(EDirection direction)
         {
             var localData = _blue.Get();
             var localDataCount = localData.Count;
@@ -35,7 +35,7 @@ namespace InfiniteScroll.InfinityScroll
             switch (direction)
             {
                 case EDirection.Bottom:
-                    if (item > localData[localDataCount - 1] - 40)
+                   // if (item > localData[localDataCount - 1] - 40)
                     {
                         _dataRequested = true;
                         var storedDataDown = await _red.GetFrom(localData[localDataCount - 1], EDirection.Bottom);
@@ -53,13 +53,12 @@ namespace InfiniteScroll.InfinityScroll
                     }
                     break;
                 case EDirection.Top:
-                    if (item < localData[0] + 40)
+                   // if (item < localData[0] + 40)
                     {
                         _dataRequested = true;
                         var storedDataUp = await _red.GetFrom(localData[0], EDirection.Top);
                         _dataRequested = false;
                         _blue.AddFrom(localData[0], storedDataUp);
-
 
                         var newData = _blue.Get();
                         var maxCount = 200;
@@ -72,7 +71,7 @@ namespace InfiniteScroll.InfinityScroll
                     break;
             }
 
-            Console.WriteLine("ScrolledTo " + item + direction);
+            //Console.WriteLine("ScrolledTo " + item + direction);
         }
 
         private void ShowLocalData()

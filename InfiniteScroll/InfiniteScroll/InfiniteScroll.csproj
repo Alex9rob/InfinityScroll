@@ -154,6 +154,17 @@
     </Compile>
     <Compile Include="Collection\Delegate.cs" />
     <Compile Include="InfinityScroll\EDirection.cs" />
+    <Compile Include="InfinityScroll\UpdateHelper.cs" />
+    <Compile Include="InfinityScroll\Diff\IDiffing.cs" />
+    <Compile Include="InfinityScroll\Diff\DiffResult.cs" />
+    <Compile Include="InfinityScroll\Diff\IDiffResultType.cs" />
+    <Compile Include="InfinityScroll\Diff\MoveIndex.cs" />
+    <Compile Include="InfinityScroll\Diff\IDiffable.cs" />
+    <Compile Include="InfinityScroll\Diff\IThrottle.cs" />
+    <Compile Include="InfinityScroll\Diff\Diff.cs" />
+    <Compile Include="Visual\CellVisualModel.cs" />
+    <Compile Include="Collection\InfiniteCollectionView.cs" />
+    <Compile Include="Collection\InfiniteCollectionFlowLayout.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using Foundation;
 using InfiniteScroll.InfinityScroll;
 using InfiniteScroll.InfinityScroll.InPorts;
+using InfiniteScroll.Visual;
 using UIKit;
 
 namespace InfiniteScroll.Collection
 {
     public class DataSource : UICollectionViewDataSource
     {
-        
-        
         private IUserInteraction _userInteraction;
-        private List<int> _data;
+        private bool _notEmptyCollection = true;
+
+        public List<CellVisualModel> Data { get; set; }// = new List<int>();
+        
+
         public DataSource(IUserInteraction userInteraction)
         {
             _userInteraction = userInteraction;
@@ -21,19 +24,19 @@ namespace InfiniteScroll.Collection
         public override UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)
         {
             var cell = collectionView.DequeueReusableCell(Cell.Key, indexPath) as Cell;
-            var item = _data[(int)indexPath.Item];
-            cell.SetupCell(item);
+            var item = Data[(int)indexPath.Item];
+            cell.SetupCell(item.Data);
             var border = 30;
 
             var index = (int)indexPath.Item;
-            if (index < border)
+            if (index < border && _notEmptyCollection)
             {
-                _userInteraction.ScrolledTo(item, EDirection.Top);
+                _userInteraction.ScrolledTo(EDirection.Top);
                 Console.WriteLine("ScrolledTo " + item + EDirection.Top);
             }
-            else if (index > GetCount() - 1 - border)
+            else if (index > GetCount() - 1 - border && _notEmptyCollection)
             {
-                _userInteraction.ScrolledTo(item, EDirection.Bottom);
+                _userInteraction.ScrolledTo(EDirection.Bottom);
                 Console.WriteLine("ScrolledTo " + item + EDirection.Bottom);
             }
 
@@ -42,7 +45,7 @@ namespace InfiniteScroll.Collection
 
         private int GetCount()
         {
-            return  _data?.Count ?? 0;
+            return  Data?.Count ?? 0;
         }
 
         public override nint GetItemsCount(UICollectionView collectionView, nint section)
@@ -50,11 +53,14 @@ namespace InfiniteScroll.Collection
             return GetCount();
         }
 
-        public void UpdateData(List<int> data)
+        public void UpdateData(List<CellVisualModel> data)
         {
-            _data = data;
-        }
 
-        
+            if(Data!= null && Data.Count != 0)
+            {
+                _notEmptyCollection = true;
+            }
+            Data = data;
+        }
     }
 }

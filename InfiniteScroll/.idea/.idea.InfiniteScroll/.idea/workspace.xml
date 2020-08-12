@@ -1,32 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c623d83-3586-4edc-a9c5-0e2cb3404cf6" name="Default Changelist" comment="" />
+    <list default="true" id="9c623d83-3586-4edc-a9c5-0e2cb3404cf6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/Collection/InfiniteCollectionFlowLayout.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/Collection/InfiniteCollectionView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/Diff.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/DiffResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/IDiffResultType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/IDiffable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/IDiffing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/IThrottle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/MoveIndex.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/UpdateHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InfiniteScroll/Visual/CellVisualModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InfiniteScroll/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InfiniteScroll/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InfiniteScroll/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InfiniteScroll/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/InfiniteScroll/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/InfiniteScroll/xs/UserPrefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/InfiniteScroll/xs/project-cache/InfiniteScroll-Debug|iPhoneSimulator.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/InfiniteScroll/xs/project-cache/InfiniteScroll-Debug|iPhoneSimulator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/Collection/DataSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/Collection/DataSource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/InfiniteScroll.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/InfiniteScroll.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/InfinityScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/InfinityScroll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Red.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Red.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/ViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/ViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfiniteScroll/ViewController.designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfiniteScroll/ViewController.designer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/ViewController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IShowData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/EventBus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Red.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Net.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/IDiffable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/InPorts/IUserInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/INet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/Diff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/DiffResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/InfinityScroll.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IBlue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/Collection/DataSource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IRed.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/InfiniteScroll/Collection/Cell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/UpdateHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/EventBus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InfiniteScroll/Collection/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/Collection/DataSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/ViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/Collection/Cell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///Library/Frameworks/Xamarin.iOS.framework/Versions/13.18.3.2/src/Xamarin.iOS/ObjCRuntime/Runtime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/INet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Red.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/Visual/CellVisualModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IRed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Net.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IBlue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IShowData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -42,14 +70,19 @@
         <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/EventBus.cs" />
         <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/I.cs" />
         <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/IShowData.cs" />
-        <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" />
         <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Red.cs" />
         <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/InfinityScroll.cs" />
+        <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/Diff.cs" />
+        <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/Diff/DiffResult.cs" />
+        <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/UpdateHelper.cs" />
+        <option value="$PROJECT_DIR$/InfiniteScroll/Visual/CellVisualModel.cs" />
         <option value="$PROJECT_DIR$/InfiniteScroll/ViewController.cs" />
+        <option value="$PROJECT_DIR$/InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1fwokOgl4N1Zb6mZKPbmc3odUfz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -59,6 +92,7 @@
     <property name="Device#class com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSSimulatorKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider" value="iPhone 11" />
     <property name="DeviceKind#com.jetbrains.rider.run.xamarin.ios.devices.XamarinIOSDevicesProvider" value="Simulator" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -93,8 +127,20 @@
       <option name="presentableId" value="Default" />
       <updated>1597138658044</updated>
       <workItem from="1597138659475" duration="12325000" />
+      <workItem from="1597230871824" duration="3547000" />
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state width="1847" height="341" key="GridCell.Tab.0.bottom" timestamp="1597158457930">

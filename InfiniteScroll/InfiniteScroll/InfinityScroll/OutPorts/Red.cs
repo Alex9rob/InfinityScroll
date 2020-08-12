@@ -9,7 +9,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         public Red()
         {
             _data = new List<int>();
-            for (var i = 0; i < 1000; i++)
+            for (var i = -1000; i < 2000; i++)
             {
                 _data.Add(i);
             }
@@ -23,13 +23,14 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         {
             await Task.Delay(1000);
             var res = new List<int>();
-            switch(direction)
+            var index = _data.FindIndex(f => f == item);
+            switch (direction)
             {
                 case EDirection.Bottom:
-                    res = GetNextData(item);
+                    res = GetNextData(index);
                     break;
                 case EDirection.Top:
-                    res = GetPreviousData(item);
+                    res = GetPreviousData(index);
                     break;
             }
 
@@ -37,9 +38,9 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         }
 
 
-        private List<int>GetPreviousData(int item)
+        private List<int> GetPreviousData(int index)
         {
-            var startIndex = item - 100;
+            var startIndex = index - 100;
             var count = 100;
             if (startIndex < 0)
             {
@@ -49,11 +50,11 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.GetRange(startIndex, count);
         }
 
-        private List<int>GetNextData(int item)
+        private List<int> GetNextData(int item)
         {
             var startIndex = item + 1;
             var count = 100;
-            if(startIndex + count > _data.Count)
+            if (startIndex + count > _data.Count)
             {
                 count = _data.Count - startIndex;
             }

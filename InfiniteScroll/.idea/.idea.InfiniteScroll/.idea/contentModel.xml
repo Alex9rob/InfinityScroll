@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_InfiniteScroll.-926350596.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_InfiniteScroll.1196039764.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="InfiniteScroll" t="IncludeRecursive">
         <e p="AppDelegate.cs" t="Include" />
@@ -31,10 +31,21 @@
           <e p="Cell.xib" t="Include" />
           <e p="DataSource.cs" t="Include" />
           <e p="Delegate.cs" t="Include" />
+          <e p="InfiniteCollectionFlowLayout.cs" t="Include" />
+          <e p="InfiniteCollectionView.cs" t="Include" />
         </e>
         <e p="Entitlements.plist" t="Include" />
         <e p="InfiniteScroll.csproj" t="IncludeRecursive" />
         <e p="InfinityScroll" t="Include">
+          <e p="Diff" t="Include">
+            <e p="Diff.cs" t="Include" />
+            <e p="DiffResult.cs" t="Include" />
+            <e p="IDiffable.cs" t="Include" />
+            <e p="IDiffing.cs" t="Include" />
+            <e p="IDiffResultType.cs" t="Include" />
+            <e p="IThrottle.cs" t="Include" />
+            <e p="MoveIndex.cs" t="Include" />
+          </e>
           <e p="EDirection.cs" t="Include" />
           <e p="EventBus.cs" t="Include" />
           <e p="InfinityScroll.cs" t="Include" />
@@ -50,6 +61,7 @@
             <e p="Net.cs" t="Include" />
             <e p="Red.cs" t="Include" />
           </e>
+          <e p="UpdateHelper.cs" t="Include" />
         </e>
         <e p="Info.plist" t="Include" />
         <e p="LaunchScreen.storyboard" t="Include" />
@@ -60,6 +72,9 @@
         <e p="SceneDelegate.cs" t="Include" />
         <e p="ViewController.cs" t="Include" />
         <e p="ViewController.designer.cs" t="Include" />
+        <e p="Visual" t="Include">
+          <e p="CellVisualModel.cs" t="Include" />
+        </e>
       </e>
       <e p="InfiniteScroll.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
