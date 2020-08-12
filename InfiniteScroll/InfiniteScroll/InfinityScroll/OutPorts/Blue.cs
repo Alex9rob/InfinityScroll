@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
@@ -25,7 +26,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         {
             Console.WriteLine("BlueDataCount " + _data.Count);
 
-            return _data;
+            return _data.ToList();
         }
 
         public void RemoveFrom(int item, EDirection direction)

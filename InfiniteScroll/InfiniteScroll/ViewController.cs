@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.InfinityScroll.OutPorts;
 using UIKit;
+using InfiniteScroll.InfinityScroll;
+using Foundation;
 
 namespace InfiniteScroll
 {
@@ -37,10 +39,30 @@ namespace InfiniteScroll
             _collectionView.Bounces = false;
         }
 
-        public void ShowData(List<int> data)
+        public void ShowData(List<int> data, EDirection direction)
         {
             _dataSource.UpdateData(data);
             _collectionView.ReloadData();
+
+            ////
+        
+
+
+
+            //if (direction == EDirection.Top)
+            //{
+               
+
+
+            //    _collectionView.SetContentOffset(new CoreGraphics.CGPoint(0, 3000), false);
+            //}
+            //else if (direction == EDirection.Bottom)
+            //{
+            //    //var oldOffset = _collectionView.ContentSize.Height - _collectionView.ContentOffset.Y;
+            //    var oldOffset = _collectionView.ContentOffset.Y;
+
+            //    _collectionView.SetContentOffset(new CoreGraphics.CGPoint(0, oldOffset), false);
+            //}
         }
     }
 }
