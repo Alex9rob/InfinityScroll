@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.InfiniteScroll PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.061142AA-A2AD-49B5-89F5-434FD402CA98" />
   <MonoDevelop.Ide.Workbench ActiveDocument="InfiniteScroll/InfinityScroll/InfinityScroll.cs">
     <Files>
-      <File FileName="InfiniteScroll/ViewController.cs" Line="39" Column="66" />
-      <File FileName="InfiniteScroll/Collection/DataSource.cs" Line="35" Column="68" />
-      <File FileName="InfiniteScroll/InfinityScroll/InfinityScroll.cs" Line="34" Column="39" />
-      <File FileName="InfiniteScroll/Collection/Cell.cs" Line="1" Column="1" />
-      <File FileName="InfiniteScroll/Collection/Delegate.cs" Line="20" Column="12" />
-      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" Line="1" Column="1" />
-      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Red.cs" Line="28" Column="39" />
-      <File FileName="InfiniteScroll/Main.cs" Line="12" Column="1" />
+      <File FileName="InfiniteScroll/ViewController.cs" Line="39" Column="1" />
+      <File FileName="InfiniteScroll/Collection/DataSource.cs" />
+      <File FileName="InfiniteScroll/InfinityScroll/InfinityScroll.cs" Line="32" Column="14" />
+      <File FileName="InfiniteScroll/Collection/Cell.cs" />
+      <File FileName="InfiniteScroll/Collection/Delegate.cs" />
+      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" />
+      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Red.cs" />
+      <File FileName="InfiniteScroll/Main.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -37,10 +37,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="38" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="46" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="43" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="35" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
