@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
@@ -13,8 +14,8 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             {
                 _data.Add(i);
             }
-            
         }
+
         public bool IsBorder(int item, EDirection direction)
         {
             throw new System.NotImplementedException();
@@ -22,12 +23,24 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 
         public List<int> Get()
         {
+            Console.WriteLine("BlueDataCount " + _data.Count);
+
             return _data;
         }
 
         public void RemoveFrom(int item, EDirection direction)
         {
-            throw new System.NotImplementedException();
+            var index = _data.FindIndex(f => f == item);
+
+            if (direction == EDirection.Bottom)
+            {
+                _data.RemoveRange(index, _data.Count - index);
+            }
+
+            else if(direction == EDirection.Top)
+            {
+                _data.RemoveRange(0, index + 1);
+            }
         }
 
         public void AddFrom(int item, List<int> items)

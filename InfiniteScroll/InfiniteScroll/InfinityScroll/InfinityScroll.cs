@@ -41,6 +41,14 @@ namespace InfiniteScroll.InfinityScroll
                         var storedDataDown = await _red.GetFrom(localData[localDataCount - 1], EDirection.Bottom);
                         _dataRequested = false;
                         _blue.AddFrom(localData[localDataCount - 1], storedDataDown);
+
+                        var newData = _blue.Get();
+                        var maxCount = 200;
+                        if (newData.Count > maxCount)
+                        {
+                            _blue.RemoveFrom(newData[newData.Count - maxCount -1], EDirection.Top);
+                        }
+
                         ShowLocalData();
                     }
                     break;
@@ -51,6 +59,14 @@ namespace InfiniteScroll.InfinityScroll
                         var storedDataUp = await _red.GetFrom(localData[0], EDirection.Top);
                         _dataRequested = false;
                         _blue.AddFrom(localData[0], storedDataUp);
+
+
+                        var newData = _blue.Get();
+                        var maxCount = 200;
+                        if (newData.Count > maxCount)
+                        {
+                            _blue.RemoveFrom(newData[maxCount - 1], EDirection.Bottom);
+                        }
                         ShowLocalData();
                     }
                     break;
