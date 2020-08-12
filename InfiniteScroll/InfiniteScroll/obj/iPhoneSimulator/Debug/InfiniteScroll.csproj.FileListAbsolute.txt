@@ -1,0 +1,15 @@
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/bin/iPhoneSimulator/Debug/InfiniteScroll.exe
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/bin/iPhoneSimulator/Debug/InfiniteScroll.pdb
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/InfiniteScroll.csprojAssemblyReference.cache
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/InfiniteScroll.csproj.CoreCompileInputs.cache
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/InfiniteScroll.csproj.CopyComplete
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/InfiniteScroll.exe
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/InfiniteScroll.pdb
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/ibtool/_BundleResourceWithLogicalName.items
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/actool/_PartialAppManifest.items
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/actool/_BundleResourceWithLogicalName.items
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/coremlc/_PartialAppManifest.items
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/coremlc/_BundleResourceWithLogicalName.items
+/Users/user/Projects/InfiniteScroll/InfiniteScroll/InfiniteScroll/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.6/optimized/

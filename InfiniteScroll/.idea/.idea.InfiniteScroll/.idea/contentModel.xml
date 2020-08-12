@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_InfiniteScroll.-926350596.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="InfiniteScroll" t="IncludeRecursive">
+        <e p="AppDelegate.cs" t="Include" />
+        <e p="Assets.xcassets" t="Include">
+          <e p="AppIcon.appiconset" t="Include">
+            <e p="Contents.json" t="Include" />
+            <e p="Icon1024.png" t="Include" />
+            <e p="Icon120.png" t="Include" />
+            <e p="Icon152.png" t="Include" />
+            <e p="Icon167.png" t="Include" />
+            <e p="Icon180.png" t="Include" />
+            <e p="Icon20.png" t="Include" />
+            <e p="Icon29.png" t="Include" />
+            <e p="Icon40.png" t="Include" />
+            <e p="Icon58.png" t="Include" />
+            <e p="Icon60.png" t="Include" />
+            <e p="Icon76.png" t="Include" />
+            <e p="Icon80.png" t="Include" />
+            <e p="Icon87.png" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Collection" t="Include">
+          <e p="Cell.cs" t="Include" />
+          <e p="Cell.designer.cs" t="Include" />
+          <e p="Cell.xib" t="Include" />
+          <e p="DataSource.cs" t="Include" />
+          <e p="Delegate.cs" t="Include" />
+        </e>
+        <e p="Entitlements.plist" t="Include" />
+        <e p="InfiniteScroll.csproj" t="IncludeRecursive" />
+        <e p="InfinityScroll" t="Include">
+          <e p="EDirection.cs" t="Include" />
+          <e p="EventBus.cs" t="Include" />
+          <e p="InfinityScroll.cs" t="Include" />
+          <e p="InPorts" t="Include">
+            <e p="IUserInteraction.cs" t="Include" />
+          </e>
+          <e p="OutPorts" t="Include">
+            <e p="Blue.cs" t="Include" />
+            <e p="IBlue.cs" t="Include" />
+            <e p="INet.cs" t="Include" />
+            <e p="IRed.cs" t="Include" />
+            <e p="IShowData.cs" t="Include" />
+            <e p="Net.cs" t="Include" />
+            <e p="Red.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Info.plist" t="Include" />
+        <e p="LaunchScreen.storyboard" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="Main.storyboard" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Resources" t="Include" />
+        <e p="SceneDelegate.cs" t="Include" />
+        <e p="ViewController.cs" t="Include" />
+        <e p="ViewController.designer.cs" t="Include" />
+      </e>
+      <e p="InfiniteScroll.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
