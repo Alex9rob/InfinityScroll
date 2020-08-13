@@ -32,12 +32,12 @@ namespace InfiniteScroll.Collection
             if (index < border && _notEmptyCollection)
             {
                 _userInteraction.ScrolledTo(EDirection.Top);
-                Console.WriteLine("ScrolledTo " + item + EDirection.Top);
+                Console.WriteLine("ScrolledTo " + item.Data + EDirection.Top);
             }
             else if (index > GetCount() - 1 - border && _notEmptyCollection)
             {
                 _userInteraction.ScrolledTo(EDirection.Bottom);
-                Console.WriteLine("ScrolledTo " + item + EDirection.Bottom);
+                Console.WriteLine("ScrolledTo " + item.Data + EDirection.Bottom);
             }
 
             return cell;

@@ -78,7 +78,7 @@ namespace InfiniteScroll.InfinityScroll
                     },
                     completion =>
                     {
-                        collectionView.ScrollCollectionViewToBottomIfPossible(true);
+                        //collectionView.ScrollCollectionViewToBottomIfPossible(true);
                         IsUpdateInProgress = false;
                         UpdateCompleted?.Invoke(true);
                     });
