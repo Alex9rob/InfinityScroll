@@ -39,7 +39,7 @@ namespace InfiniteScroll
             _collectionView.Bounces = false;
         }
 
-        public void ShowData(List<int> data, EDirection direction)
+        public void ShowData(List<int> data)
         {
             _dataSource.UpdateData(data);
             _collectionView.ReloadData();
