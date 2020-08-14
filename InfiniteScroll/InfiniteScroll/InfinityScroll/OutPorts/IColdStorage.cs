@@ -7,7 +7,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
     public interface IColdStorage
     {
         Task<List<Number>> GetFrom(int number);
-        void AddFrom(int number, List<Number> items);
+        void AddOrUpdate(int number, List<Number> items);
         void Clear();
     }
 }

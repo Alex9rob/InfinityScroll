@@ -12,10 +12,20 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         public ColdStorage()
         {
             _data = new List<Number>();
-            for (var i = 0; i < 500; i++)
+            for (var i = 0; i <= 350; i++)
             {
-                _data.Add(new Number(i, EStorageType.Cold));
+                AddModel(i);
             }
+
+            for (var i = 450; i <= 900; i++)
+            {
+                AddModel(i);
+            }
+        }
+
+        private void AddModel(int number)
+        {
+            _data.Add(new Number(number, EStorageType.Cold));
         }
 
         public async Task<List<Number>> GetFrom(int number)
@@ -36,14 +46,66 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.GetRange(startIndex, count);
         }
 
-        public void AddFrom(int number, List<Number> items)
+        public void AddOrUpdate(int number, List<Number> items)
         {
-            _data.AddRange(items);
+            if(items.Count == 0)
+            {
+                return;
+            }
+            var firstNumber = items[0].NumberData;
+            var lastNumber = items[items.Count - 1].NumberData;
+
+            var firstNumberDataInStorage = GetFirstNumberDataInStorage(firstNumber);
+            var lastNumberDataInStorage = GetLastNumberDataInStorage(lastNumber);
+
+            var firstIndexInStorage = _data.FindIndex(f => f.NumberData == firstNumberDataInStorage);
+            var lastIndexInStorage = _data.FindIndex(f => f.NumberData == lastNumberDataInStorage);
+
+            var count = 0;
+            foreach(var item in _data)
+            {
+                if(item.NumberData>= firstIndexInStorage & item.NumberData <= lastIndexInStorage)
+                {
+                    count++;
+                }
+            }                
+
+            _data.RemoveRange(firstIndexInStorage, count);
+            _data.InsertRange(firstIndexInStorage, items);
         }
+
+        private int GetFirstNumberDataInStorage(int firstNumberInNet)
+        {
+            for (int i = 0; i < _data.Count; i++)
+            {
+                var number = _data[i].NumberData;
+                if (number >= firstNumberInNet)
+                {
+                    return number;
+                }
+            }
+            return 0;
+        }
+
+        private int GetLastNumberDataInStorage(int lastNumberNet)
+        {
+            var lastIndex = 0;
+            for (int i = 0; i < _data.Count; i++)
+            {
+                var number = _data[i].NumberData;
+                if (number > lastNumberNet)
+                {
+                    break;
+                }
+                lastIndex = number;
+            }
+            return lastIndex;
+        }
+
 
         public void Clear()
         {
-            throw new System.NotImplementedException();
+            _data = new List<Number>();
         }
     }
 }

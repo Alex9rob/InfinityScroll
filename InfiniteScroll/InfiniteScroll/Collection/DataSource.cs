@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foundation;
-using InfiniteScroll.InfinityScroll;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.Visual;
 using UIKit;

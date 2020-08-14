@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.InfinityScroll.OutPorts;
 
@@ -23,7 +21,20 @@ namespace InfiniteScroll.InfinityScroll
 
         public void EnterScreen()
         {
+            FillDataFromNet();
             ShowLocalData();
+        }
+
+        private async void FillDataFromNet()
+        {
+            var data = await _net.GetFrom(-1);
+
+            _coldStorage.AddOrUpdate(-1, data);
+            var storedData = await _coldStorage.GetFrom(-1);
+            _hotStorage.Clear();
+            _hotStorage.Add(storedData);
+            data = _hotStorage.Get();
+            _showData.ShowData(data);
         }
 
         public async void ScrolledToEnd()
@@ -37,23 +48,20 @@ namespace InfiniteScroll.InfinityScroll
             var localDataCount = localData.Count;
 
             _dataRequested = true;
-
             var lastIndex = localData[localDataCount - 1].NumberData;
-            var storedDataDown = await _coldStorage.GetFrom(lastIndex);
 
+            var netData = await _net.GetFrom(lastIndex);
+            _coldStorage.AddOrUpdate(lastIndex, netData);
 
-            if(storedDataDown.Count == 0) //or less than threshold
-            {
-                var netData = await _net.GetFrom(lastIndex);
-                _coldStorage.AddFrom(lastIndex, netData);
-                storedDataDown = await _coldStorage.GetFrom(lastIndex);
-            }
-
+            var storedData = await _coldStorage.GetFrom(lastIndex);
             _dataRequested = false;
-            _hotStorage.Add(storedDataDown);
-            ShowLocalData();
+
+            _hotStorage.Add(storedData);
+            var hotData = _hotStorage.Get();
+
+            _showData.ShowData(hotData);
         }
-        
+
         private async void ShowLocalData()
         {
             var data = _hotStorage.Get();
@@ -63,7 +71,7 @@ namespace InfiniteScroll.InfinityScroll
             }
             else
             {
-                var storedData = await _coldStorage.GetFrom(0);
+                var storedData = await _coldStorage.GetFrom(-1);
                 _hotStorage.Add(storedData);
                 data = _hotStorage.Get();
                 _showData.ShowData(data);

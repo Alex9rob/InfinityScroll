@@ -30,7 +30,7 @@ namespace InfiniteScroll.Collection
                     background = UIColor.Blue;
                     break;
                 case EStorageType.Net:
-                    background = UIColor.Green;
+                    background = UIColor.White;
                     break;
             }
             ContentView.BackgroundColor = background;

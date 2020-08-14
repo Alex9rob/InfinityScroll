@@ -12,10 +12,6 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         public HotStorage()
         {
             _data = new List<Number>();
-            for (int i = 0; i < 100; i++)
-            {
-                _data.Add(new Number(i, Enumerables.EStorageType.Hot));
-            }
         }
 
         public List<Number> Get()

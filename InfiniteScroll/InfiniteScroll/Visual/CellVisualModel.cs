@@ -5,7 +5,7 @@ namespace InfiniteScroll.Visual
 {
     public struct CellVisualModel : IDiffable<string>
     {
-        public string DiffIdentifier => Data.ToString();
+        public string DiffIdentifier => Data.ToString() + StorageType.ToString();
         
         public int Data { get; set; }
         public EStorageType StorageType { get; }

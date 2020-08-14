@@ -7,20 +7,37 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 {
     public class Net : INet
     {
+        public static bool IsOn = true;
+
         private List<Number> _data;
 
         public Net()
         {
             _data = new List<Number>();
-            for (var i = 0; i < 1000; i++)
+            for (var i = 0; i < 400; i++)
             {
-                _data.Add(new Number(i, EStorageType.Net));
+                AddModel(i);
             }
+            for (var i = 550; i < 1000; i++)
+            {
+                AddModel(i);
+            }
+        }
+
+        private void AddModel(int number)
+        {
+            _data.Add(new Number(number, EStorageType.Net));
         }
 
         public async Task<List<Number>> GetFrom(int number)
         {
-            await Task.Delay(700);
+
+            await Task.Delay(1000);
+
+            if (!IsOn)
+            {
+                return new List<Number>();
+            }
             var index = _data.FindIndex(f => f.NumberData == number);
             return GetNextData(index);
         }

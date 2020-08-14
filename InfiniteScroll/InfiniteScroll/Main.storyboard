@@ -29,9 +29,19 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqP-52-dK6">
+                                <rect key="frame" x="286" y="83" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AU9-B8-YnL"/>
+                                    <constraint firstAttribute="width" constant="60" id="NF7-Vr-eRn"/>
+                                </constraints>
+                                <state key="normal" title="Net"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cqP-52-dK6" firstAttribute="leading" secondItem="UPW-Fl-RlY" secondAttribute="trailing" constant="-128" id="CZp-uH-STN"/>
+                            <constraint firstItem="cqP-52-dK6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="JDu-Bc-lMU"/>
                             <constraint firstItem="UPW-Fl-RlY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OdD-p7-yEd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UPW-Fl-RlY" secondAttribute="bottom" id="dii-p9-Mxu"/>
                             <constraint firstItem="UPW-Fl-RlY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nuq-o7-o3C"/>
@@ -40,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="_collectionView" destination="UPW-Fl-RlY" id="name-outlet-UPW-Fl-RlY"/>
+                        <outlet property="_btnNet" destination="cqP-52-dK6" id="name-outlet-cqP-52-dK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

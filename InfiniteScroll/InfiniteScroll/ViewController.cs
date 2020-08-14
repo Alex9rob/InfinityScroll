@@ -24,6 +24,8 @@ namespace InfiniteScroll
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            SetupViews();
+            
             _updateHelper = new UpdateHelper<CellVisualModel>();
             var blue = new HotStorage();
             var red = new ColdStorage();
@@ -33,6 +35,26 @@ namespace InfiniteScroll
             SetUpCollection();
             _userInteraction.EnterScreen();
         }
+
+        private void SetupViews()
+        {
+            _btnNet.Layer.CornerRadius = 30;
+            SetBtnNetBackground();
+            _btnNet.TouchUpInside += BtnNetTouchUpInside;
+        }
+
+        private void BtnNetTouchUpInside(object sender, EventArgs e)
+        {
+            Net.IsOn = !Net.IsOn;
+            SetBtnNetBackground();
+        }
+
+        private void SetBtnNetBackground()
+        {
+            _btnNet.BackgroundColor = Net.IsOn ? UIColor.Green : UIColor.Red;
+        }
+
+
 
         private void SetUpCollection()
         {
