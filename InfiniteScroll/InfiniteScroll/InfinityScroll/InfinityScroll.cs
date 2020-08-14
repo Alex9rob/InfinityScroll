@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.InfinityScroll.OutPorts;
 
@@ -36,7 +37,18 @@ namespace InfiniteScroll.InfinityScroll
             var localDataCount = localData.Count;
 
             _dataRequested = true;
-            var storedDataDown = await _coldStorage.GetFrom(localData[localDataCount - 1].NumberData);
+
+            var lastIndex = localData[localDataCount - 1].NumberData;
+            var storedDataDown = await _coldStorage.GetFrom(lastIndex);
+
+
+            if(storedDataDown.Count == 0) //or less than threshold
+            {
+                var netData = await _net.GetFrom(lastIndex);
+                _coldStorage.AddFrom(lastIndex, netData);
+                storedDataDown = await _coldStorage.GetFrom(lastIndex);
+            }
+
             _dataRequested = false;
             _hotStorage.Add(storedDataDown);
             ShowLocalData();

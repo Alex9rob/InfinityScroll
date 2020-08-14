@@ -8,12 +8,11 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
     public class ColdStorage : IColdStorage
     {
         private List<Number> _data;
-        private IColdStorage _coldStorageImplementation;
 
         public ColdStorage()
         {
             _data = new List<Number>();
-            for (var i = -1000; i < 200000; i++)
+            for (var i = 0; i < 500; i++)
             {
                 _data.Add(new Number(i, EStorageType.Cold));
             }
@@ -39,7 +38,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 
         public void AddFrom(int number, List<Number> items)
         {
-            throw new System.NotImplementedException();
+            _data.AddRange(items);
         }
 
         public void Clear()
