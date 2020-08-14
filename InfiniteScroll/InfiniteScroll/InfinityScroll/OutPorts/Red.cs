@@ -33,11 +33,6 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.GetRange(startIndex, count);
         }
 
-        public void RemoveFrom(int item, EDirection direction)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public void AddFrom(int item, List<int> items)
         {
             throw new System.NotImplementedException();
