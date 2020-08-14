@@ -6,11 +6,12 @@ namespace InfiniteScroll.InfinityScroll
 {
     public class InfinityScroll : IUserInteraction
     {
-        private IBlue _blue;
-        private IRed _red;
+        private readonly IBlue _blue;
+        private readonly IRed _red;
         private INet _net;
-        private IShowData _showData;
+        private readonly IShowData _showData;
         private bool _dataRequested;
+
         public InfinityScroll(IBlue blue, IRed red, INet net, IShowData showData)
         {
             _blue = blue;
@@ -18,62 +19,29 @@ namespace InfiniteScroll.InfinityScroll
             _net = net;
             _showData = showData;
         }
-        
+
         public void EnterScreen()
         {
             ShowLocalData();
         }
 
-        public async void ScrolledTo(EDirection direction)
+        public async void ScrolledToEnd()
         {
-            var localData = _blue.Get();
-            var localDataCount = localData.Count;
             if (_dataRequested)
             {
                 return;
             }
-            switch (direction)
-            {
-                case EDirection.Bottom:
-                   // if (item > localData[localDataCount - 1] - 40)
-                    {
-                        _dataRequested = true;
-                        var storedDataDown = await _red.GetFrom(localData[localDataCount - 1], EDirection.Bottom);
-                        _dataRequested = false;
-                        _blue.AddFrom(localData[localDataCount - 1], storedDataDown);
 
-                        var newData = _blue.Get();
-                        var maxCount = 200;
-                        if (newData.Count > maxCount)
-                        {
-                            _blue.RemoveFrom(newData[newData.Count - maxCount -1], EDirection.Top);
-                        }
+            var localData = _blue.Get();
+            var localDataCount = localData.Count;
 
-                        ShowLocalData();
-                    }
-                    break;
-                case EDirection.Top:
-                   // if (item < localData[0] + 40)
-                    {
-                        _dataRequested = true;
-                        var storedDataUp = await _red.GetFrom(localData[0], EDirection.Top);
-                        _dataRequested = false;
-                        _blue.AddFrom(localData[0], storedDataUp);
-
-                        var newData = _blue.Get();
-                        var maxCount = 200;
-                        if (newData.Count > maxCount)
-                        {
-                            _blue.RemoveFrom(newData[maxCount - 1], EDirection.Bottom);
-                        }
-                        ShowLocalData();
-                    }
-                    break;
-            }
-
-            //Console.WriteLine("ScrolledTo " + item + direction);
+            _dataRequested = true;
+            var storedDataDown = await _red.GetFrom(localData[localDataCount - 1]);
+            _dataRequested = false;
+            _blue.Add(storedDataDown);
+            ShowLocalData();
         }
-
+        
         private void ShowLocalData()
         {
             var data = _blue.Get();

@@ -3,6 +3,6 @@
     public interface IUserInteraction
     {
         void EnterScreen();
-        void ScrolledTo(EDirection direction);    
+        void ScrolledToEnd();    
     }
 }

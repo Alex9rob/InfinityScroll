@@ -1,14 +1,12 @@
 ﻿<Properties StartupConfiguration="{3B95F639-4EB2-43DA-8E02-0EA57D2DF86C}|Default">
-  <MonoDevelop.Ide.ItemProperties.InfiniteScroll PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.061142AA-A2AD-49B5-89F5-434FD402CA98" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="InfiniteScroll/InfinityScroll/UpdateHelper.cs">
+  <MonoDevelop.Ide.ItemProperties.InfiniteScroll PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008030-000C68C10CFB802E" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="InfiniteScroll/ViewController.cs">
     <Files>
-      <File FileName="InfiniteScroll/ViewController.cs" Line="65" Column="1" />
-      <File FileName="InfiniteScroll/Collection/DataSource.cs" Line="33" Column="14" />
-      <File FileName="InfiniteScroll/InfinityScroll/InfinityScroll.cs" Line="63" Column="34" />
-      <File FileName="InfiniteScroll/InfinityScroll/InPorts/IUserInteraction.cs" Line="4" Column="6" />
-      <File FileName="InfiniteScroll/Collection/Delegate.cs" Line="21" Column="60" />
-      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/IShowData.cs" Line="7" Column="18" />
-      <File FileName="InfiniteScroll/InfinityScroll/UpdateHelper.cs" Line="1" Column="1" />
+      <File FileName="InfiniteScroll/InfinityScroll/UpdateHelper.cs" Line="34" Column="1" />
+      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Red.cs" Line="12" Column="43" />
+      <File FileName="InfiniteScroll/InfinityScroll/OutPorts/Blue.cs" Line="12" Column="10" />
+      <File FileName="InfiniteScroll/Visual/CellVisualModel.cs" Line="12" Column="27" />
+      <File FileName="InfiniteScroll/ViewController.cs" Line="51" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,13 +15,11 @@
             <Node name="InfiniteScroll" expanded="True">
               <Node name="Collection" expanded="True" />
               <Node name="InfinityScroll" expanded="True">
-                <Node name="Diff" expanded="True" />
                 <Node name="InPorts" expanded="True" />
                 <Node name="OutPorts" expanded="True" />
-                <Node name="UpdateHelper.cs" selected="True" />
               </Node>
               <Node name="Visual" expanded="True" />
-              <Node name="ViewController.cs" expanded="True" />
+              <Node name="ViewController.cs" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
@@ -31,14 +27,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Catchpoint exceptionName="System.Exception" includeSubclasses="True" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScrollGit/InfinityScroll/InfiniteScroll/InfiniteScroll/Collection/DataSource.cs" relfile="InfiniteScroll/Collection/DataSource.cs" line="40" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScrollGit/InfinityScroll/InfiniteScroll/InfiniteScroll/ViewController.cs" relfile="InfiniteScroll/ViewController.cs" line="77" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScrollGit/InfinityScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="51" column="1" />
-      <Breakpoint file="/Users/user/Projects/InfiniteScroll/InfiniteScrollGit/InfinityScroll/InfiniteScroll/InfiniteScroll/InfinityScroll/InfinityScroll.cs" relfile="InfiniteScroll/InfinityScroll/InfinityScroll.cs" line="69" column="1" />
+      <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

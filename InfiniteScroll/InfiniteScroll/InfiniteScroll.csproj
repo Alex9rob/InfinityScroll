@@ -153,7 +153,6 @@
       <DependentUpon>Cell.cs</DependentUpon>
     </Compile>
     <Compile Include="Collection\Delegate.cs" />
-    <Compile Include="InfinityScroll\EDirection.cs" />
     <Compile Include="InfinityScroll\UpdateHelper.cs" />
     <Compile Include="InfinityScroll\Diff\IDiffing.cs" />
     <Compile Include="InfinityScroll\Diff\DiffResult.cs" />

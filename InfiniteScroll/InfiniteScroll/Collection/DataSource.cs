@@ -10,11 +10,10 @@ namespace InfiniteScroll.Collection
 {
     public class DataSource : UICollectionViewDataSource
     {
-        private IUserInteraction _userInteraction;
+        private readonly IUserInteraction _userInteraction;
         private bool _notEmptyCollection = true;
 
-        public List<CellVisualModel> Data { get; set; }// = new List<int>();
-        
+        public List<CellVisualModel> Data { get; set; }
 
         public DataSource(IUserInteraction userInteraction)
         {
@@ -25,21 +24,15 @@ namespace InfiniteScroll.Collection
         {
             var cell = collectionView.DequeueReusableCell(Cell.Key, indexPath) as Cell;
             var item = Data[(int)indexPath.Item];
-            cell.SetupCell(item.Data);
-            var border = 30;
+            cell.SetupCell(item);
+            var border = 50;
 
             var index = (int)indexPath.Item;
-            if (index < border && _notEmptyCollection)
+            if (index > GetCount() - 1 - border && _notEmptyCollection)
             {
-                _userInteraction.ScrolledTo(EDirection.Top);
-                Console.WriteLine("ScrolledTo " + item.Data + EDirection.Top);
+                _userInteraction.ScrolledToEnd();
+                Console.WriteLine("ScrolledToEnd " + item.Data);
             }
-            else if (index > GetCount() - 1 - border && _notEmptyCollection)
-            {
-                _userInteraction.ScrolledTo(EDirection.Bottom);
-                Console.WriteLine("ScrolledTo " + item.Data + EDirection.Bottom);
-            }
-
             return cell;
         }
 
@@ -55,7 +48,6 @@ namespace InfiniteScroll.Collection
 
         public void UpdateData(List<CellVisualModel> data)
         {
-
             if(Data!= null && Data.Count != 0)
             {
                 _notEmptyCollection = true;

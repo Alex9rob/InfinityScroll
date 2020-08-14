@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Foundation;
+using InfiniteScroll.Visual;
 using UIKit;
 
 namespace InfiniteScroll.Collection
@@ -15,9 +16,9 @@ namespace InfiniteScroll.Collection
             Nib = UINib.FromName("Cell", NSBundle.MainBundle);
         }
 
-        public void SetupCell(int number)
+        public void SetupCell(CellVisualModel model)
         {
-            _lblTitle.Text = number.ToString();
+            _lblTitle.Text = model.Data.ToString();
         }
 
         protected Cell(IntPtr handle) : base(handle)

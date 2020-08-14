@@ -11,15 +11,10 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         public Blue()
         {
             _data = new List<int>();
-            for (var i = 450; i < 550; i++)
+            for (var i = 0; i < 100; i++)
             {
                 _data.Add(i);
             }
-        }
-
-        public bool IsBorder(int item, EDirection direction)
-        {
-            throw new System.NotImplementedException();
         }
 
         public List<int> Get()
@@ -29,31 +24,14 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.ToList();
         }
 
-        public void RemoveFrom(int item, EDirection direction)
+        public void Add(List<int> items)
         {
-            var index = _data.FindIndex(f => f == item);
-
-            if (direction == EDirection.Bottom)
-            {
-                _data.RemoveRange(index, _data.Count - index);
-            }
-
-            else if(direction == EDirection.Top)
-            {
-                _data.RemoveRange(0, index + 1);
-            }
+            _data.AddRange(items);
         }
 
-        public void AddFrom(int item, List<int> items)
+        public void Clear()
         {
-            if (item == _data[_data.Count - 1])
-            {
-                _data.AddRange(items);
-            }
-            else if (item == _data[0])
-            {
-                _data.InsertRange(0, items);
-            }
+            _data = new List<int>();
         }
     }
 }
