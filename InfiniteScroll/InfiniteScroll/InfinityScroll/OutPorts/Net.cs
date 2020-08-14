@@ -5,7 +5,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 {
     public class Net : INet
     {
-        public Task<List<int>> GetFrom(int item, EDirection direction)
+        public Task<List<int>> GetFrom(int item)
         {
             throw new System.NotImplementedException();
         }

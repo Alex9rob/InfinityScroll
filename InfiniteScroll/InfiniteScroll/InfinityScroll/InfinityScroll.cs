@@ -42,11 +42,18 @@ namespace InfiniteScroll.InfinityScroll
             ShowLocalData();
         }
         
-        private void ShowLocalData()
+        private async void ShowLocalData()
         {
             var data = _blue.Get();
             if (data != null && data.Count != 0)
             {
+                _showData.ShowData(data);
+            }
+            else
+            {
+                var storedData = await _red.GetFrom(0);
+                _blue.Add(storedData);
+                data = _blue.Get();
                 _showData.ShowData(data);
             }
         }

@@ -11,10 +11,6 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
         public Blue()
         {
             _data = new List<int>();
-            for (var i = 0; i < 100; i++)
-            {
-                _data.Add(i);
-            }
         }
 
         public List<int> Get()

@@ -5,6 +5,6 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 {
     public interface INet
     {
-        Task<List<int>> GetFrom(int item, EDirection direction);
+        Task<List<int>> GetFrom(int item);
     }
 }
