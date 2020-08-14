@@ -1,8 +1,6 @@
 ﻿using System;
 using CoreGraphics;
 using Foundation;
-using InfiniteScroll.InfinityScroll;
-using InfiniteScroll.InfinityScroll.InPorts;
 using UIKit;
 
 namespace InfiniteScroll.Collection
@@ -11,7 +9,12 @@ namespace InfiniteScroll.Collection
     {
         public override CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
         {
-            return new CGSize(collectionView.Frame.Width, 20);
+            return new CGSize(collectionView.Frame.Width, 30);
+        }
+
+        public override nfloat GetMinimumLineSpacingForSection(UICollectionView collectionView, UICollectionViewLayout layout, nint section)
+        {
+            return 0;
         }
     }
 }

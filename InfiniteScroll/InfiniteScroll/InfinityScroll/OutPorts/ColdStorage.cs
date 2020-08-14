@@ -1,30 +1,34 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using InfiniteScroll.Entities;
+using InfiniteScroll.Enumerables;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public class Red : IRed
+    public class ColdStorage : IColdStorage
     {
-        private List<int> _data;
-        public Red()
+        private List<Number> _data;
+        private IColdStorage _coldStorageImplementation;
+
+        public ColdStorage()
         {
-            _data = new List<int>();
+            _data = new List<Number>();
             for (var i = -1000; i < 200000; i++)
             {
-                _data.Add(i);
+                _data.Add(new Number(i, EStorageType.Cold));
             }
         }
 
-        public async Task<List<int>> GetFrom(int item)
+        public async Task<List<Number>> GetFrom(int number)
         {
             await Task.Delay(300);
-            var index = _data.FindIndex(f => f == item);
+            var index = _data.FindIndex(f => f.NumberData == number);
             return GetNextData(index);
         }
 
-        private List<int> GetNextData(int item)
+        private List<Number> GetNextData(int index)
         {
-            var startIndex = item + 1;
+            var startIndex = index + 1;
             var count = 100;
             if (startIndex + count > _data.Count)
             {
@@ -33,7 +37,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.GetRange(startIndex, count);
         }
 
-        public void AddFrom(int item, List<int> items)
+        public void AddFrom(int number, List<Number> items)
         {
             throw new System.NotImplementedException();
         }

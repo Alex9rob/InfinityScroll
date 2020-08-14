@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using InfiniteScroll.Entities;
 using InfiniteScroll.InfinityScroll;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.InfinityScroll.OutPorts;
@@ -24,8 +25,8 @@ namespace InfiniteScroll
         {
             base.ViewDidLoad();
             _updateHelper = new UpdateHelper<CellVisualModel>();
-            var blue = new Blue();
-            var red = new Red();
+            var blue = new HotStorage();
+            var red = new ColdStorage();
             var net = new Net();
 
             _userInteraction = new InfinityScroll.InfinityScroll(blue, red, net, this);
@@ -43,12 +44,14 @@ namespace InfiniteScroll
             _collectionView.Bounces = false;
         }
 
-        public void ShowData(List<int> data)
+        public void ShowData(List<Number> data)
         {
+            //TODO: adapter
+            
             var oldData = _dataSource.Data == null ?
                 new List<CellVisualModel>() :
                 new List<CellVisualModel>(_dataSource.Data);
-            var newData = data.Select(item => new CellVisualModel(item)).ToList();
+            var newData = data.Select(item => new CellVisualModel(item.NumberData, item.StorageType)).ToList();
             _dataSource.UpdateData(newData);
             _updateHelper.UpdateList(_collectionView, newData, oldData);
         }

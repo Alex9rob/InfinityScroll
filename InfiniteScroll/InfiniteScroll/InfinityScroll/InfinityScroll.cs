@@ -6,16 +6,16 @@ namespace InfiniteScroll.InfinityScroll
 {
     public class InfinityScroll : IUserInteraction
     {
-        private readonly IBlue _blue;
-        private readonly IRed _red;
+        private readonly IHotStorage _hotStorage;
+        private readonly IColdStorage _coldStorage;
         private INet _net;
         private readonly IShowData _showData;
         private bool _dataRequested;
 
-        public InfinityScroll(IBlue blue, IRed red, INet net, IShowData showData)
+        public InfinityScroll(IHotStorage hotStorage, IColdStorage coldStorage, INet net, IShowData showData)
         {
-            _blue = blue;
-            _red = red;
+            _hotStorage = hotStorage;
+            _coldStorage = coldStorage;
             _net = net;
             _showData = showData;
         }
@@ -32,28 +32,28 @@ namespace InfiniteScroll.InfinityScroll
                 return;
             }
 
-            var localData = _blue.Get();
+            var localData = _hotStorage.Get();
             var localDataCount = localData.Count;
 
             _dataRequested = true;
-            var storedDataDown = await _red.GetFrom(localData[localDataCount - 1]);
+            var storedDataDown = await _coldStorage.GetFrom(localData[localDataCount - 1].NumberData);
             _dataRequested = false;
-            _blue.Add(storedDataDown);
+            _hotStorage.Add(storedDataDown);
             ShowLocalData();
         }
         
         private async void ShowLocalData()
         {
-            var data = _blue.Get();
+            var data = _hotStorage.Get();
             if (data != null && data.Count != 0)
             {
                 _showData.ShowData(data);
             }
             else
             {
-                var storedData = await _red.GetFrom(0);
-                _blue.Add(storedData);
-                data = _blue.Get();
+                var storedData = await _coldStorage.GetFrom(0);
+                _hotStorage.Add(storedData);
+                data = _hotStorage.Get();
                 _showData.ShowData(data);
             }
         }

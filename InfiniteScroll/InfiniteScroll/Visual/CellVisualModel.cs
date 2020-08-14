@@ -1,3 +1,4 @@
+using InfiniteScroll.Enumerables;
 using InfiniteScroll.InfinityScroll.Diff;
 
 namespace InfiniteScroll.Visual
@@ -7,10 +8,12 @@ namespace InfiniteScroll.Visual
         public string DiffIdentifier => Data.ToString();
         
         public int Data { get; set; }
+        public EStorageType StorageType { get; }
 
-        public CellVisualModel(int data)
+        public CellVisualModel(int data, EStorageType storageType)
         {
             Data = data;
+            StorageType = storageType;
         }
     }
 }

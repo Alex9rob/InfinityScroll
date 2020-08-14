@@ -130,16 +130,18 @@
     <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Number.cs" />
+    <Compile Include="Enumerables\EStorageType.cs" />
     <Compile Include="InfinityScroll\EventBus.cs" />
     <Compile Include="InfinityScroll\InfinityScroll.cs" />
     <Compile Include="InfinityScroll\InPorts\IUserInteraction.cs" />
-    <Compile Include="InfinityScroll\OutPorts\Blue.cs" />
-    <Compile Include="InfinityScroll\OutPorts\IBlue.cs" />
+    <Compile Include="InfinityScroll\OutPorts\HotStorage.cs" />
+    <Compile Include="InfinityScroll\OutPorts\IHotStorage.cs" />
     <Compile Include="InfinityScroll\OutPorts\INet.cs" />
-    <Compile Include="InfinityScroll\OutPorts\IRed.cs" />
+    <Compile Include="InfinityScroll\OutPorts\IColdStorage.cs" />
     <Compile Include="InfinityScroll\OutPorts\IShowData.cs" />
     <Compile Include="InfinityScroll\OutPorts\Net.cs" />
-    <Compile Include="InfinityScroll\OutPorts\Red.cs" />
+    <Compile Include="InfinityScroll\OutPorts\ColdStorage.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="SceneDelegate.cs" />

@@ -3,8 +3,10 @@ using InfiniteScroll.Entities;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public interface IShowData
+    public interface IHotStorage
     {
-        void ShowData(List<Number> data);
+        List<Number> Get();
+        void Add(List<Number> items);
+        void Clear();
     }
 }
