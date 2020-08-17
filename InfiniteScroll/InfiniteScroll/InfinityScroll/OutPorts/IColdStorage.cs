@@ -1,13 +1,14 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using InfiniteScroll.Entities;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public interface IColdStorage
+    public interface IColdStorage<T> where T : IComparable
     {
-        Task<List<Number>> GetFrom(int number);
-        void AddOrUpdate(int number, List<Number> items);
+        Task<List<T>> Get();
+        Task<List<T>> GetFrom(T itemFrom);
+        Task AddOrUpdate(List<T> items);
         void Clear();
     }
 }

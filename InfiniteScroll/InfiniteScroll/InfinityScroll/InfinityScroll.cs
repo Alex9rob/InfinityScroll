@@ -1,17 +1,18 @@
+using System;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.InfinityScroll.OutPorts;
 
 namespace InfiniteScroll.InfinityScroll
 {
-    public class InfinityScroll : IUserInteraction
+    public class InfinityScroll<T> : IUserInteraction<T>  where T : IComparable
     {
-        private readonly IHotStorage _hotStorage;
-        private readonly IColdStorage _coldStorage;
-        private INet _net;
-        private readonly IShowData _showData;
+        private readonly IHotStorage<T> _hotStorage;
+        private readonly IColdStorage<T> _coldStorage;
+        private INet<T> _net;
+        private readonly IShowData<T> _showData;
         private bool _dataRequested;
 
-        public InfinityScroll(IHotStorage hotStorage, IColdStorage coldStorage, INet net, IShowData showData)
+        public InfinityScroll(IHotStorage<T> hotStorage, IColdStorage<T> coldStorage, INet<T> net, IShowData<T> showData)
         {
             _hotStorage = hotStorage;
             _coldStorage = coldStorage;
@@ -27,10 +28,10 @@ namespace InfiniteScroll.InfinityScroll
 
         private async void FillDataFromNet()
         {
-            var data = await _net.GetFrom(-1);
+            var data = await _net.Get();
 
-            _coldStorage.AddOrUpdate(-1, data);
-            var storedData = await _coldStorage.GetFrom(-1);
+            await _coldStorage.AddOrUpdate(data);
+            var storedData = await _coldStorage.Get();
             _hotStorage.Clear();
             _hotStorage.Add(storedData);
             data = _hotStorage.Get();
@@ -48,12 +49,12 @@ namespace InfiniteScroll.InfinityScroll
             var localDataCount = localData.Count;
 
             _dataRequested = true;
-            var lastIndex = localData[localDataCount - 1].NumberData;
+            var lastItem = localData[localDataCount - 1];
 
-            var netData = await _net.GetFrom(lastIndex);
-            _coldStorage.AddOrUpdate(lastIndex, netData);
+            var netData = await _net.GetFrom(lastItem);
+            await _coldStorage.AddOrUpdate(netData);
 
-            var storedData = await _coldStorage.GetFrom(lastIndex);
+            var storedData = await _coldStorage.GetFrom(lastItem);
             _dataRequested = false;
 
             _hotStorage.Add(storedData);
@@ -71,7 +72,7 @@ namespace InfiniteScroll.InfinityScroll
             }
             else
             {
-                var storedData = await _coldStorage.GetFrom(-1);
+                var storedData = await _coldStorage.Get();
                 _hotStorage.Add(storedData);
                 data = _hotStorage.Get();
                 _showData.ShowData(data);

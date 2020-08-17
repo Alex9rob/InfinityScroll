@@ -5,7 +5,7 @@ using InfiniteScroll.Enumerables;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public class ColdStorage : IColdStorage
+    public class ColdStorage : IColdStorage<Number> 
     {
         private List<Number> _data;
 
@@ -28,11 +28,19 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             _data.Add(new Number(number, EStorageType.Cold));
         }
 
-        public async Task<List<Number>> GetFrom(int number)
+        public async Task<List<Number>> Get()
         {
             await Task.Delay(300);
-            var index = _data.FindIndex(f => f.NumberData == number);
-            return GetNextData(index);
+            var res = GetNextData(-1);
+            return res;
+        }
+
+        public async Task<List<Number>> GetFrom(Number itemFrom)
+        {
+            await Task.Delay(300);
+            var index = _data.FindIndex(f => f.NumberData == itemFrom.NumberData);
+            var res = GetNextData(index);
+            return res;
         }
 
         private List<Number> GetNextData(int index)
@@ -46,11 +54,11 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             return _data.GetRange(startIndex, count);
         }
 
-        public void AddOrUpdate(int number, List<Number> items)
+        public Task AddOrUpdate(List<Number> items)
         {
             if(items.Count == 0)
             {
-                return;
+                return Task.CompletedTask;
             }
             var firstNumber = items[0].NumberData;
             var lastNumber = items[items.Count - 1].NumberData;
@@ -72,6 +80,7 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
 
             _data.RemoveRange(firstIndexInStorage, count);
             _data.InsertRange(firstIndexInStorage, items);
+            return Task.CompletedTask;
         }
 
         private int GetFirstNumberDataInStorage(int firstNumberInNet)
@@ -101,7 +110,6 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             }
             return lastIndex;
         }
-
 
         public void Clear()
         {

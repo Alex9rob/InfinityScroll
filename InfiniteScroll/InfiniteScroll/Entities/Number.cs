@@ -1,8 +1,9 @@
+using System;
 using InfiniteScroll.Enumerables;
 
 namespace InfiniteScroll.Entities
 {
-    public class Number
+    public class Number : IComparable
     {
         public int NumberData { get; }
         public EStorageType StorageType { get; }
@@ -11,6 +12,20 @@ namespace InfiniteScroll.Entities
         {
             NumberData = number;
             StorageType = storageType;
+        }
+
+        public int CompareTo(object obj)
+        {
+
+            if(obj is Number other)
+            {
+                if (other.NumberData > NumberData)
+                {
+                    return 1; 
+                }
+            }
+
+            return 0;
         }
     }
 }

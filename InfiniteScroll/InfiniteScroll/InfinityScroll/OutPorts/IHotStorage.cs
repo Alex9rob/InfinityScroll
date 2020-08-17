@@ -1,12 +1,13 @@
+using System;
 using System.Collections.Generic;
 using InfiniteScroll.Entities;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public interface IHotStorage
+    public interface IHotStorage<T> where T : IComparable
     {
-        List<Number> Get();
-        void Add(List<Number> items);
+        List<T> Get();
+        void Add(IEnumerable<T> items);
         void Clear();
     }
 }

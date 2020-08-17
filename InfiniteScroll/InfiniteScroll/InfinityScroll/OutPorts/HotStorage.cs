@@ -1,34 +1,31 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using InfiniteScroll.Entities;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public class HotStorage : IHotStorage
+    public class HotStorage<T> : IHotStorage<T> where T : IComparable
     {
-        private List<Number> _data;
-
+        private List<T> _data;
+        
         public HotStorage()
         {
-            _data = new List<Number>();
+            _data = new List<T>();
         }
-
-        public List<Number> Get()
+        
+        public List<T> Get()
         {
-            Console.WriteLine("BlueDataCount " + _data.Count);
-
             return _data.ToList();
         }
 
-        public void Add(List<Number> items)
+        public void Add(IEnumerable<T> items)
         {
             _data.AddRange(items);
         }
 
         public void Clear()
         {
-            _data = new List<Number>();
+            _data = new List<T>();
         }
     }
 }

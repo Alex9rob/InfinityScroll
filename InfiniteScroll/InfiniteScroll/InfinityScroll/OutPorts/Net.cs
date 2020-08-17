@@ -5,7 +5,7 @@ using InfiniteScroll.Enumerables;
 
 namespace InfiniteScroll.InfinityScroll.OutPorts
 {
-    public class Net : INet
+    public class Net : INet<Number>
     {
         public static bool IsOn = true;
 
@@ -29,16 +29,26 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             _data.Add(new Number(number, EStorageType.Net));
         }
 
-        public async Task<List<Number>> GetFrom(int number)
+        public async Task<List<Number>> Get()
         {
-
             await Task.Delay(1000);
 
             if (!IsOn)
             {
                 return new List<Number>();
             }
-            var index = _data.FindIndex(f => f.NumberData == number);
+            return GetNextData(-1);
+        }
+
+        public async Task<List<Number>> GetFrom(Number item)
+        {
+            await Task.Delay(1000);
+
+            if (!IsOn)
+            {
+                return new List<Number>();
+            }
+            var index = _data.FindIndex(f => f.NumberData == item.NumberData);
             return GetNextData(index);
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foundation;
+using InfiniteScroll.Entities;
 using InfiniteScroll.InfinityScroll.InPorts;
 using InfiniteScroll.Visual;
 using UIKit;
@@ -9,12 +10,12 @@ namespace InfiniteScroll.Collection
 {
     public class DataSource : UICollectionViewDataSource
     {
-        private readonly IUserInteraction _userInteraction;
+        private readonly IUserInteraction<Number> _userInteraction;
         private bool _notEmptyCollection = true;
 
         public List<CellVisualModel> Data { get; set; }
 
-        public DataSource(IUserInteraction userInteraction)
+        public DataSource(IUserInteraction<Number> userInteraction)
         {
             _userInteraction = userInteraction;
         }

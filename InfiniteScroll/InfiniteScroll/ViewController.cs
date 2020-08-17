@@ -11,10 +11,10 @@ using UIKit;
 
 namespace InfiniteScroll
 {
-    public partial class ViewController : UIViewController, IShowData
+    public partial class ViewController : UIViewController, IShowData<Number>
     {
 
-        private IUserInteraction _userInteraction;
+        private IUserInteraction<Number> _userInteraction;
         private DataSource _dataSource;
         private UpdateHelper<CellVisualModel> _updateHelper;
         public ViewController(IntPtr handle) : base(handle)
@@ -27,11 +27,11 @@ namespace InfiniteScroll
             SetupViews();
             
             _updateHelper = new UpdateHelper<CellVisualModel>();
-            var blue = new HotStorage();
+            var blue = new HotStorage<Number>();
             var red = new ColdStorage();
             var net = new Net();
 
-            _userInteraction = new InfinityScroll.InfinityScroll(blue, red, net, this);
+            _userInteraction = new InfinityScroll.InfinityScroll<Number>(blue, red, net, this);
             SetUpCollection();
             _userInteraction.EnterScreen();
         }
