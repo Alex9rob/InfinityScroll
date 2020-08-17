@@ -60,6 +60,8 @@ namespace InfiniteScroll.InfinityScroll.OutPorts
             {
                 return Task.CompletedTask;
             }
+            
+
             var firstNumber = items[0].NumberData;
             var lastNumber = items[items.Count - 1].NumberData;
 

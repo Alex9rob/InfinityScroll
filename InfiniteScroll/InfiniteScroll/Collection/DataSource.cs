@@ -10,12 +10,12 @@ namespace InfiniteScroll.Collection
 {
     public class DataSource : UICollectionViewDataSource
     {
-        private readonly IUserInteraction<Number> _userInteraction;
+        private readonly IUserInteraction _userInteraction;
         private bool _notEmptyCollection = true;
 
         public List<CellVisualModel> Data { get; set; }
 
-        public DataSource(IUserInteraction<Number> userInteraction)
+        public DataSource(IUserInteraction userInteraction)
         {
             _userInteraction = userInteraction;
         }

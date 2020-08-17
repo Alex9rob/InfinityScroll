@@ -14,7 +14,7 @@ namespace InfiniteScroll
     public partial class ViewController : UIViewController, IShowData<Number>
     {
 
-        private IUserInteraction<Number> _userInteraction;
+        private IUserInteraction _userInteraction;
         private DataSource _dataSource;
         private UpdateHelper<CellVisualModel> _updateHelper;
         public ViewController(IntPtr handle) : base(handle)

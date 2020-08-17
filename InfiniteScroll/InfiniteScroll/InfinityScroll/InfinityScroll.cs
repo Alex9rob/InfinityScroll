@@ -4,7 +4,7 @@ using InfiniteScroll.InfinityScroll.OutPorts;
 
 namespace InfiniteScroll.InfinityScroll
 {
-    public class InfinityScroll<T> : IUserInteraction<T>  where T : IComparable
+    public class InfinityScroll<T> : IUserInteraction  where T : IComparable
     {
         private readonly IHotStorage<T> _hotStorage;
         private readonly IColdStorage<T> _coldStorage;

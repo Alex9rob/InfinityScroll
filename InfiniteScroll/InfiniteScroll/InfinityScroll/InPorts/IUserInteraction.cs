@@ -2,7 +2,7 @@
 
 namespace InfiniteScroll.InfinityScroll.InPorts
 {
-    public interface IUserInteraction<T> where T : IComparable
+    public interface IUserInteraction
     {
         void EnterScreen();
         void ScrolledToEnd();
